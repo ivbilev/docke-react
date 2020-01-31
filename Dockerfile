@@ -13,5 +13,6 @@ RUN npm run build
 #it will create build forlder in workdir /app/build
 
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 #will copy over from builder phase
